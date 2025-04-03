@@ -1,8 +1,10 @@
 import React from 'react';
+import FoodDisplay from '../../components/FoodDisplay/FoodDisplay';
+
 
 const ExploreFood = () => {
   return (
-    <div>ExploreFood</div>
+    <FoodDisplay />
   )
 }
 
