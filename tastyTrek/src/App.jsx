@@ -9,6 +9,7 @@ import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import { ToastContainer} from 'react-toastify';
 
 
 
@@ -17,7 +18,7 @@ const App = () => {
   return (
     <div>
       <Menubar/>
-
+      <ToastContainer/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/contact' element={<Contact />} />
