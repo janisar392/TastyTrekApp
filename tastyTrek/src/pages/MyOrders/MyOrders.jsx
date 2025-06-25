@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
+import { assets } from '../../assets/assets';
+import "./MyOrders.css"
+
 
 const MyOrders = () => {
   const { token } = useContext(StoreContext);
@@ -30,7 +33,7 @@ const MyOrders = () => {
                   return (
                     <tr key={index}>
                       <td>
-                        <img src="" alt="" height={48} width={48}></img>
+                        <img src={assets.delivery} alt="" height={48} width={48}></img>
                       </td>
                       <td>
                         {
@@ -48,7 +51,7 @@ const MyOrders = () => {
                           )
                         }
                       </td>
-                      <td>&#x20B9;{order.amount}</td>
+                      <td>&#x20B9;{order.amount.toFixed(2)}</td>
                       <td>Items: {Array.isArray(order.orderedItems) ? order.orderedItems.length : 0}</td>
                       <td className="fw-bold text-capitalize">&#x25cf;{order.orderStatus}</td>
                       <td>
