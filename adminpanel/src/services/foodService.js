@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = 'http://localhost:8080/api/foods';
+const API_URL = 'https://tastytrek.onrender.com/api/foods';
 
 export const addFood = async (foodData ,image) => {
    const formData = new FormData();

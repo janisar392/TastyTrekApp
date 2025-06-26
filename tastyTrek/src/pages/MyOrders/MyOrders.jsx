@@ -10,7 +10,7 @@ const MyOrders = () => {
   const [data, setData] = useState([]);
 
   const fetchOrders = async () => {
-    const response = await axios.get("http://localhost:8080/api/orders", {
+    const response = await axios.get("https://tastytrek.onrender.com/api/orders", {
       headers: { 'Authorization': `Bearer ${token}` },
     });
     setData(response.data);
